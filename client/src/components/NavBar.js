@@ -3,6 +3,8 @@ import styled from "styled-components"
 // import Button from 'react-bootstrap/Button';
  
 function NavBar({handleLogout, currentUser}){
+
+  console.log(currentUser)
     return(
         <NavBarStyler>
         <NavLink to="/mypage">Home</NavLink>

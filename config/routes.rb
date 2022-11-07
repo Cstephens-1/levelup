@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  resources :evaluations
+  resources :class_students
+  resources :students
+  resources :skills
+  resources :gym_classes
   resources :users
 
   get "/me", to: "users#show"
