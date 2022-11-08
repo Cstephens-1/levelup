@@ -8,6 +8,9 @@ function NavBar({handleLogout, currentUser}){
     return(
         <NavBarStyler>
         <NavLink to="/mypage">Home</NavLink>
+        <NavLink to="/students">Students</NavLink>
+        <NavLink to="/classes">Classes</NavLink>
+        <NavLink to="/skills">Skills</NavLink>
         <NavLink to="/" onClick={handleLogout}>Logout</NavLink>
         <SpanStyler>Welcome, {currentUser.name}</SpanStyler>
         </NavBarStyler>

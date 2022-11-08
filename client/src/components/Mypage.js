@@ -1,11 +1,10 @@
 // import styled from "styled-components"
-import { useState } from "react"
-import NavBar from "./NavBar"
+
+
 
 function Mypage(){
 
-    const [students, setStudents] = useState([])
- 
+    
     return(
         <div>
             <h1>test in my page</h1>

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 
 
 
 function Login({ setCurrentUser }) {
-  // const history = useHistory()
+  const navigate = useNavigate()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   // const props = useSpring({to: {opacity: 1}, from: {opacity:0}})
@@ -24,7 +24,7 @@ function Login({ setCurrentUser }) {
         if (res.ok) {
           res.json().then(user => {
             setCurrentUser(user)
-            // history.push('/mypage')
+            navigate('/mypage')
           })
         } else {
           res.json().then(errors => {

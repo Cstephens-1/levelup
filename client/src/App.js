@@ -27,17 +27,7 @@ function App() {
   if(!authChecked) { return <div></div>}
   return (
     <Router>
-      {currentUser ? (
-          <AuthenticatedApp
-            setCurrentUser={setCurrentUser}
-            currentUser={currentUser}
-          />
-        ) : (
-          <UnauthenticatedApp
-            setCurrentUser={setCurrentUser}
-          />
-        )
-      }
+      {currentUser ? (<AuthenticatedApp setCurrentUser={setCurrentUser} currentUser={currentUser}/>) : ( <UnauthenticatedApp setCurrentUser={setCurrentUser} />)}
     </Router>
   )
 }
