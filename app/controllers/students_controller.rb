@@ -6,9 +6,15 @@ class StudentsController < ApplicationController
       render json: students
     end
 
-    def create()
+    def create
         student = Student.create(last_name: params[:last_name], name: params[:name], gender: params[:gender], level: params[:level])
         render json: student
+    end
+
+    def destroy
+        student = Student.find_by(id: params[:id])
+        student.destroy
+        head :no_content
     end
 
 

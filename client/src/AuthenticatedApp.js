@@ -25,15 +25,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
       })
   }
 
-  const [studentList, setStudentList] = useState([])
-
-    function fetchStudents(){
-
-        fetch("http://localhost:3000/students")
-        .then(resp=> resp.json())
-        .then(student => setStudentList(student))
-    }
-    useEffect(fetchStudents, [])
+ 
  
     
   return (
@@ -44,7 +36,7 @@ function AuthenticatedApp({ currentUser, setCurrentUser }) {
       </nav>
       <Routes>
         <Route path="/mypage" element={<Mypage currentUser={currentUser}/>}></Route>
-        <Route path="/students" element={<Students students={studentList} fetchStudents={fetchStudents} />}></Route>
+        <Route path="/students" element={<Students />}></Route>
         <Route path="/classes" element={<AllClasses />}></Route>
         <Route path="/skills" element={<Skills />}></Route>
       </Routes>

@@ -1,21 +1,20 @@
 import styled from "styled-components"
 
-function StudentProfile({student}){
+function StudentProfile({student, handleDelete}){
+
+    function deleteThisStudent(){
+        handleDelete(student)
+    }
+
+
+
     return(
         <>
         <table>
-            <thead>
-                <tr>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Gender</th>
-                    <th scope="col">Class</th>
-                </tr>
-            </thead>
-    
             <tbody>
                 <tr>
-                    <th scope="row">{student.last_name}</th>
+                    <button onClick={deleteThisStudent}>Delete Student</button>
+                    <td>{student.last_name}</td>
                     <td>{student.name}</td>
                     <td>{student.gender}</td>
                     <td>{student.level}</td>
