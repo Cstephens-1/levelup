@@ -78,9 +78,9 @@ function Students(){
         </table>
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder= "Last Name" value={newLastName} onChange={(e) => setNewLastName(e.target.value)}/>
-            <input type="text" value={newFirstName} onChange={(e) => setNewFirstName(e.target.value)}/>
-            <input type="text" value={newGender} onChange={(e) => setNewGender(e.target.value)}/>
-            <input type="text" value={newLevel} onChange={(e) => setNewLevel(e.target.value)}/>
+            <input type="text" placeholder= "First Name" value={newFirstName} onChange={(e) => setNewFirstName(e.target.value)}/>
+            <input type="text" placeholder= "Gender" value={newGender} onChange={(e) => setNewGender(e.target.value)}/>
+            <input type="text" placeholder= "Current Level" value={newLevel} onChange={(e) => setNewLevel(e.target.value)}/>
             <button type="submit">Add New Student</button>
         </form>
         </>
